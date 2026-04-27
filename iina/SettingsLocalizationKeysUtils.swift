@@ -19,6 +19,7 @@ extension SettingsLocalization.Key {
   static let text_CurrentThumbnailCache = SettingsLocalization.Key("$CurrentThumbnailCache")
   static let text_PleaseSelectTheMediaTypes = SettingsLocalization.Key("$PleaseSelectTheMediaTypes")
   static let text_Chrome = SettingsLocalization.Key("$Chrome")
+  static let text_Safari = SettingsLocalization.Key("$Safari")
   static let text_BrowserExtensions = SettingsLocalization.Key("$BrowserExtensions")
   static let text_GetBrowserExtensionsForIINA = SettingsLocalization.Key("$GetBrowserExtensionsForIINA")
   static let text_DeleteAllWatchLater = SettingsLocalization.Key("$DeleteAllWatchLater")
