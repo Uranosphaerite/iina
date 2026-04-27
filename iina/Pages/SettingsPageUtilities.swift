@@ -273,7 +273,7 @@ fileprivate class BrowserExtensionView: SettingsAccessory.Base {
     ffBtn.imagePosition = .imageTrailing
     ffBtn.target = self
     ffBtn.action = #selector(extFirefoxBtnAction)
-    let safariBtn = makeButton(.text_Chrome)
+    let safariBtn = makeButton(.text_Safari)
     safariBtn.image = .findSFSymbol(["arrow.right"])
     safariBtn.imagePosition = .imageTrailing
     safariBtn.target = self
@@ -284,14 +284,14 @@ fileprivate class BrowserExtensionView: SettingsAccessory.Base {
   }
   
   @objc func extChromeBtnAction(_ sender: Any) {
-    NSWorkspace.shared.open([URL(string: AppData.chromeExtensionLink)!], withApplicationAt: NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.google.Chrome") ?? NSWorkspace.shared.urlForApplication(toOpen: URL(string: "http://")!)!, configuration: NSWorkspace.OpenConfiguration())
+    NSWorkspace.shared.open([URL(string: AppData.chromeExtensionLink)!], withApplicationAt: NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.google.Chrome") ?? NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.microsoft.edgemac") ?? NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.brave.Browser") ?? NSWorkspace.shared.urlForApplication(toOpen: URL(string: "http://")!)!, configuration: NSWorkspace.OpenConfiguration())
   }
 
   @objc func extFirefoxBtnAction(_ sender: Any) {
-    NSWorkspace.shared.open([URL(string: AppData.firefoxExtensionLink)!], withApplicationAt: NSWorkspace.shared.urlForApplication(withBundleIdentifier: "org.mozilla.firefox") ?? NSWorkspace.shared.urlForApplication(toOpen: URL(string: "http://")!)!, configuration: NSWorkspace.OpenConfiguration())
+    NSWorkspace.shared.open([URL(string: AppData.firefoxExtensionLink)!], withApplicationAt: NSWorkspace.shared.urlForApplication(withBundleIdentifier: "org.mozilla.firefox") ?? NSWorkspace.shared.urlForApplication(withBundleIdentifier: "org.mozilla.librewolf") ?? NSWorkspace.shared.urlForApplication(toOpen: URL(string: "http://")!)!, configuration: NSWorkspace.OpenConfiguration())
   }
   
-  @objc func extSafariBtnAction() {
+  @objc func extSafariBtnAction(_ sender: Any) {
     SFSafariApplication.showPreferencesForExtension(withIdentifier: "com.colliderli.iina.OpenInIINA")
   }
 }
