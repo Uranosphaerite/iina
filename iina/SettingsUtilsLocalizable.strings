@@ -45,6 +45,8 @@
 /* key="yuw-2i-ICd" */
 "$Chrome" = "Chrome";
 /* */
+"$Safari" = "Safari";
+/* */
 "$BrowserExtensions" = "Browser Extensions";
 /* key="zCe-1f-tkF" */
 "$GetBrowserExtensionsForIINA" = "Get Browser Extensions for IINA";
